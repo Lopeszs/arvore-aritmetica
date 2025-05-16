@@ -6,6 +6,9 @@
 * Trabalho 1
 * Disciplina: Estrutura de Dados
 * Objetivo:
+* Definir a estrutura da árvore binária que representa expressões
+* aritméticas, além de declarar as funções para criar, manipular,
+* imprimir e avaliar essas árvores.
 */
 #include "pilha.h"
 

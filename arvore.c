@@ -6,6 +6,10 @@
 * Trabalho 1
 * Disciplina: Estrutura de Dados
 * Objetivo:
+* Implementar as funções para construir árvores binárias de expressões
+* aritméticas a partir de expressões infixas, imprimir a árvore em
+* pós-ordem e avaliar o resultado da expressão representada pela árvore.
+
 */
 #include "arvore.h"
 #include <stdio.h>
