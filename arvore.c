@@ -132,12 +132,6 @@ Arv* arv_constroi(char **expressao) {
     }
 }
 
-/*
-//usei essa função auxiliar para testar, provavel que vamos usar outra
-int verifica_operador(Arv *a) {
-    return a->info == '+' || a->info == '-' || a->info == '*' || a->info == '/';
-}
-*/
 //Verificar essa função com a isa
 Pilha* avaliar_posordem(Arv *a, Pilha *pilha) 
 {

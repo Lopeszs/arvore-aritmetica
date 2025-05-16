@@ -14,37 +14,54 @@
 */
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "arvore.h"
+#define MAX 100
 
 int main() {
-    // PEGUEI ESSE TESTE DO CHAT P VC TESTAR MARIA
-    // Expressões que você quer testar
-    char expr1[] = "(3 + (2 * 5))";
-    char expr2[] = "((17 - 5) * (6 + 4))";
+    int menu;
+    
+    do {
+        printf("Menu:\n 1 - Inserir nova expressão\n 2 - Sair\n"); 
+        printf("Insria opção desejada:");
+        scanf("%d", &menu);
+        getchar(); // usei para limpar o buffer, sem ele tava dando erro
+        
+        switch(menu) {
+            case 1: {
+                char expressao[MAX];
+                char *p;
 
-    char *p;
+                //Inserir nova expressao:
+                printf("Insira nova expressão: ");
+                fgets(expressao, MAX, stdin);
+                p = expressao;
 
-    // Teste da primeira expressão
-    printf("Expressão: %s\n", expr1);
-    p = expr1;
-    Arv *arv1 = arv_constroi(&p);
-    printf("Árvore (pós-ordem): ");
-    arv_imprime(arv1);
-    printf("\n");
-    int res1 = avaliar_arvore(arv1);
-    printf("Resultado: %d\n\n", res1);
-    arv_libera(arv1);
+                //Impressao da árvore inserida:
+                printf("Expressão: %s\n", expressao);
 
-    // Teste da segunda expressão
-    printf("Expressão: %s\n", expr2);
-    p = expr2;
-    Arv *arv2 = arv_constroi(&p);
-    printf("Árvore (pós-ordem): ");
-    arv_imprime(arv2);
-    printf("\n");
-    int res2 = avaliar_arvore(arv2);
-    printf("Resultado: %d\n", res2);
-    arv_libera(arv2);
+                //Construir arvore:
+                Arv *arv = arv_constroi(&p);
 
+                //Impressao da arvore:
+                printf("Árvore (pós-ordem): ");
+                arv_imprime(arv);
+                printf("\n");
+
+                //Avaliacao da arvore:
+                int result = avaliar_arvore(arv);
+                printf("Resultado: %d\n\n", result);
+                arv_libera(arv);
+                break;
+            }
+            case 2:
+                printf("Programa Finalizado!\n");
+                break;
+
+            default:
+                printf("Opção invalida. Tente novamente.\n");
+    }
+
+} while (menu != 2);
     return 0;
 }
