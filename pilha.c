@@ -1,12 +1,14 @@
 /**************************************************
 *
 * Nome dos(as) estudantes:
-    Isabela Fernandes Lopes (RGA:)
+    Isabela Fernandes Lopes (RGA: 202419060170)
     Maria Eduarda da Silva Gonçalves (RGA: 202419060269)
-* Trabalho 1
 * Trabalho 1
 * Disciplina: Estrutura de Dados
 * Objetivo:
+* Implementar as operações básicas de uma pilha dinâmica, como empilhar,
+* desempilhar e criar a pilha, para suporte à avaliação das expressões
+* na árvore.
 */
 #include <stdio.h>
 #include <stdlib.h>
