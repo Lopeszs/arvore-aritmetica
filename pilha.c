@@ -31,7 +31,6 @@ Pilha* empilhar(Pilha *pilha, int valor) {
     return novo;
 }
 
-//Verificar essa função com a isa
 Pilha* desempilhar(Pilha *pilha, int *valor) {
     if (pilha == NULL) {
         printf("Pilha vazia!\n");

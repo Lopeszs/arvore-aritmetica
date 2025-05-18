@@ -58,18 +58,6 @@ Arv* arv_libera(Arv *a)
     return NULL;
 }
 
-/*
-int arv_pertence(Arv *a, char c)
-{
-    if (arv_vazia(a))
-        return 0; 
-    else
-        return a->info == c ||
-               arv_pertence(a->esq, c) ||
-               arv_pertence(a->dir, c);
-}
-*/
-
 //implementando considerando pos-ordem
 void arv_imprime(Arv *a)
 {
@@ -123,8 +111,8 @@ Arv* arv_constroi(char **expressao) {
         int valor = 0;
 
         while (**expressao >= '0' && **expressao <= '9') {
-            int digito = **expressao - '0'; // usando a tabela asc 0 = 48
-            valor = valor * 10 + digito; // aumenta em dezena, centena...
+            int digito = **expressao - '0'; // usando a tabela asc
+            valor = valor * 10 + digito;
             (*expressao)++;
         }
 
@@ -132,7 +120,6 @@ Arv* arv_constroi(char **expressao) {
     }
 }
 
-//Verificar essa função com a isa
 Pilha* avaliar_posordem(Arv *a, Pilha *pilha) 
 {
     if (arv_vazia(a)) {
@@ -166,8 +153,6 @@ Pilha* avaliar_posordem(Arv *a, Pilha *pilha)
     return pilha;
 }
 
-
-// Essa função chama a recursão
 int avaliar_arvore(Arv *a) 
 {
     Pilha *pilha = criarPilha();

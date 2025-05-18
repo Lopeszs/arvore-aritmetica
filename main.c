@@ -25,7 +25,7 @@ int main() {
         printf("Menu:\n 1 - Inserir nova expressão\n 2 - Sair\n"); 
         printf("Insria opção desejada:");
         scanf("%d", &menu);
-        getchar(); // usei para limpar o buffer, sem ele tava dando erro
+        getchar();
         
         switch(menu) {
             case 1: {
