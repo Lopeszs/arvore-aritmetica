@@ -22,8 +22,8 @@ int main() {
     int menu;
     
     do {
-        printf("Menu:\n 1 - Inserir nova expressão\n 2 - Sair\n"); 
-        printf("Insria opção desejada:");
+        printf("Menu:\n 1 - Inserir nova expressao\n 2 - Sair\n"); 
+        printf("Insira opcao desejada:");
         scanf("%d", &menu);
         getchar();
         
@@ -33,18 +33,18 @@ int main() {
                 char *p;
 
                 //Inserir nova expressao:
-                printf("Insira nova expressão: ");
+                printf("Insira nova expressao: ");
                 fgets(expressao, MAX, stdin);
                 p = expressao;
 
                 //Impressao da árvore inserida:
-                printf("Expressão: %s\n", expressao);
+                printf("Expressao: %s\n", expressao);
 
                 //Construir arvore:
                 Arv *arv = arv_constroi(&p);
 
                 //Impressao da arvore:
-                printf("Árvore (pós-ordem): ");
+                printf("Arvore (pos-ordem): ");
                 arv_imprime(arv);
                 printf("\n");
 
@@ -59,7 +59,7 @@ int main() {
                 break;
 
             default:
-                printf("Opção invalida. Tente novamente.\n");
+                printf("Opcao invalida. Tente novamente.\n");
     }
 
 } while (menu != 2);
